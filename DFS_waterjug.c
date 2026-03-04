@@ -1,14 +1,12 @@
 #include <stdio.h>
 
-int visited[5][4];   // A: 0-4, B: 0-3
-
-int min(int x, int y)
-{
-    if(x < y) return x;
-    return y;
-}
-
+int visited[5][4];
 int goalFound = 0;
+
+int min(int a, int b)
+{
+    return (a < b) ? a : b;
+}
 
 void DFS(int a, int b)
 {
@@ -51,7 +49,9 @@ void DFS(int a, int b)
 
 int main()
 {
-    printf("DFS Search:\n");
+    printf("DFS Search\n");
+
     DFS(0,0);
+
     return 0;
 }
